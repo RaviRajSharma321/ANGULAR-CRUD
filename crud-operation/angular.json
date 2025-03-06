@@ -70,7 +70,8 @@
               "buildTarget": "crud-operation:build:production"
             },
             "development": {
-              "buildTarget": "crud-operation:build:development"
+              "buildTarget": "crud-operation:build:development",
+              "port": 9292
             }
           },
           "defaultConfiguration": "development"
@@ -102,5 +103,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "b80a3d8d-e752-4d21-acee-4186f983a87b"
   }
 }

@@ -1,0 +1,134 @@
+
+
+
+.layout {
+  
+    .right-panel {
+      position: relative;
+      top: 0;
+      margin-left: 80px;
+      height: 100vh;
+      background-color: #F2F6F9;
+      transition: opacity 0.3s ease, margin-left 0.3s ease;
+      padding: 20px;
+
+      .header{
+        height: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .buttons{
+          display: flex;
+          gap: 8px;
+        }
+        .heading-n-back-btn{
+          display: flex;
+          align-items: center;
+          .heading{
+            font-size: 24px;
+            font-weight: 500;
+            margin: 0;
+            line-height: 1.11;
+          }
+          ._back-button{
+            height: 36px;
+            width: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #D9E1ED;
+            margin-right: 8px;
+            border-radius: 50%;
+            border: 0;
+            span{
+              width: 9px;
+              font-size: 16px;
+            }
+          }
+        }
+      }
+
+      .tabs-wrapper{
+        position: relative;
+        margin: 24px 0;
+        .the-tabs{
+          display: flex;
+          align-items: center;
+          list-style-type: none;
+          padding: 0;
+          .tab-name{
+            font-size: 14px;
+            font-weight: 100;
+            color: #5B688A;
+            padding: 0 12px;
+            text-align: center;
+            line-height: 0.9;
+            cursor: pointer;
+            &.active{
+              color: #00104F;
+              font-weight: 500;
+              position: relative;
+              &::after{
+                content: "";
+                height: 2px;
+                border-radius: 1px;
+                width: 100%;
+                background-color: #FF014B;
+                bottom: -12px;
+                position: absolute;
+                left: 0;
+                z-index: 1;
+              }
+            }
+          }
+        }
+        &::after{
+          content: "";
+          height: 1px;
+          width: 100%;
+          background-color: #E4E8F1;
+          position: absolute;
+          bottom: -12px;
+        }
+      }
+
+      .listing-wrapper{
+        padding: 15px 0 0 25px;
+        .search-bar-wrapper{
+          position: relative;
+          input{
+            border: none;
+            height: 42px;
+            width: 100%;
+            background-color: #D9E1ED;
+            border-radius: 6px;
+            padding: 0 12px 0 40px;
+            color: #5F7192;
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            &::placeholder{
+              font-size: 18px;
+              color: #95A1B9;
+              font-weight: 400;
+            }
+            &:focus{
+              outline: none;
+            }
+          }
+          .search-icon{
+            position: absolute;
+            color: #5F7192;
+            top: 9px;
+            left: 9px;
+          }
+        }
+      }
+
+      
+
+
+    }
+
+
+  }

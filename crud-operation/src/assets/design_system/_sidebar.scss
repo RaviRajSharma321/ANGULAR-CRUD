@@ -1,0 +1,102 @@
+
+
+
+.layout {
+    .left-sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 80px;
+      height: 100%;
+      background-color: #02021f;
+      transition: width 0.3s ease, box-shadow 0.3s ease;
+  
+      &:hover {
+        width: 300px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        + .right-panel {
+          opacity: 0.5; // Dull effect
+          margin-left: 300px;
+          transition: opacity 0.3s ease, margin-left 0.3s ease;
+        }
+  
+        .sidebar-content{
+          .the-tabs{
+              .tab-wrapper{
+                  flex-direction: row;
+                  justify-content: start;
+                  padding: 0 12px;
+                  transition: flex-direction 0.3s ease;
+                  gap: 8px;
+                  .the-icon {
+                    font-size: 32px;
+                  }
+                  .tab-name {
+                    font-size: 16px;
+                  }
+              }
+          }
+        }
+      }
+  
+      .sidebar-content {
+        width: 100%;
+  
+        .logo {
+          height: 80px;
+          display: flex;
+          align-items: center;
+          margin-bottom: 16px;
+          padding: 0 16px;
+          img {
+            width: 46px;
+          }
+        }
+  
+        .the-tabs {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          padding: 0 16px;
+          .tab-wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 60px;
+            margin-bottom: 8px;
+            gap: 4px;
+            background-color: transparent;
+            transition: background-color 1s ease;
+            &:hover {
+              background-color: #303041;
+              border-radius: 10px;
+              cursor: pointer;
+            }
+            &.active-tab {
+              .the-icon {
+                color: #ffffff;
+              }
+              .tab-name {
+                color: #ff0263;
+                font-weight: 600;
+              }
+            }
+            .the-icon {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;   color: #6d6b92;
+              font-size: 28px;
+            }
+            .tab-name {
+              color: #6d6b92;
+              font-size: 13px;
+              line-height: 1.3;
+            }
+          }
+        }
+      }
+    }
+  }
+  

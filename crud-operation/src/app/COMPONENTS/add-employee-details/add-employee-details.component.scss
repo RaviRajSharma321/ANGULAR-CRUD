@@ -1,0 +1,13 @@
+
+.form-wrapper{
+    padding: 20px;
+    border-radius: 6px;
+    background-color: #ffffff;
+    form{
+        .inner-wrapper{
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            gap: 20px;
+        }
+    }
+}

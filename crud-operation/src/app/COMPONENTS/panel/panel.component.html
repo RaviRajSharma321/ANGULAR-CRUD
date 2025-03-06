@@ -1,0 +1,62 @@
+
+<div class="header">
+    <div class="heading-n-back-btn">
+        <button (click)="_back_to_listing()" class="_back-button">
+            <span class="material-symbols-outlined">
+                arrow_back_ios
+            </span>
+        </button>
+        @if (show_listing) {
+            <p class="heading">Employee's listing</p>
+        }@else if (show_add_emp_form) {
+            <p class="heading">Add employee details</p>
+        }
+    </div>
+    <div class="buttons">
+        <button class="_primary-button mr-8" (click)="_add_employee()">Add Employee</button>
+        <button class="_primary-button mr-8" (click)="_update_employee()">Update Employee</button>
+    </div>
+</div>
+
+<div class="tabs-wrapper">
+
+    <ul class="the-tabs">
+        <li class="tab-name active">View all</li>
+        <li class="tab-name">Email blaster</li>
+        <li class="tab-name">Merge</li>
+    </ul>
+
+</div>
+
+<div class="listing-wrapper">
+
+    @if(show_listing){
+
+        <div class="search-bar-wrapper">
+            <span class="search-icon material-symbols-outlined">
+                search
+            </span>
+            <input type="text" placeholder="Search people...">
+        </div>
+
+    }
+
+    <div class="grid">
+
+        @if (show_listing) {
+
+        <app-listing-part></app-listing-part>
+
+        }@else if (show_add_emp_form) {
+
+            <app-add-employee-details></app-add-employee-details>
+        }
+        
+    </div>
+
+</div>
+
+
+
+
+
