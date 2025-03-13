@@ -33,11 +33,16 @@ export class EmployeeDetails {
 
 export class AddEmployeeDetailsComponent {
 
-  // employeeForm: FormGroup = new FormGroup({})
-
   employeeObj:EmployeeDetails = new EmployeeDetails;
+  employeelist: EmployeeDetails[] = [];
 
-
+  constructor(){
+    const olddata = localStorage.getItem("Empdata");
+    if(olddata != null){
+      const parsedata = JSON.parse(olddata);
+      this.employeelist = parsedata;
+    }
+  }
 
   employeeForm:FormGroup = new FormGroup({
     empid: new FormControl(this.employeeObj.empId),
@@ -51,7 +56,17 @@ export class AddEmployeeDetailsComponent {
   });
 
   onSave(){
-    
+    debugger;
+    const olddata = localStorage.getItem("EmpData");
+    if(olddata != null){
+      const parsedata = JSON.parse(olddata);
+      this.employeeForm.controls['empid'].setValue(parsedata.length + 1);
+      this.employeelist.unshift(this.employeeForm.value);
+    }
+    else{
+      this.employeelist.unshift(this.employeeForm.value);
+    }
+    localStorage.setItem("EmpData",JSON.stringify(this.employeelist));
   }
 
 }

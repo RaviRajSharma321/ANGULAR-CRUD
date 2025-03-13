@@ -23,7 +23,7 @@ export class PanelComponent {
   _add_employee(){
     this.show_listing = false;
     this.show_add_emp_form = true;
-    this.router.navigate(['add-employees']);
+    this.router.navigate(['home/add-employees']);
   }
 
   _update_employee(){
